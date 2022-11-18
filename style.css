@@ -1,0 +1,1512 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway:ital,wght@0,600;0,700;1,500&family=Roboto&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --container-padding: 100px;
+
+    /* aboutClass */
+
+    --about-marginBotton: 80px;
+
+    /* ---- h2 title styles ---- */
+    --h2-title-size: 16px;
+    --h2-title-weight-semiBold: 600;
+    --h2-title-fontFamily:'Raleway', sans-serif;
+    --h2-title-color:#8D8D8D;
+    --h2-title-textTransform: uppercase;
+    /* ---- h1 title styles ---- */
+    --h1-title-size: 26px;
+    --h1-title-weight-semiBold: 600;
+    --h1-title-fontFamily:'Raleway', sans-serif;
+    --h1-title-marginTop: 10px;
+    --h1-title-textTransform: capitalize;
+}
+
+/* ---- header ----*/
+.header{
+    width: 100%;
+    background-color: white;
+    padding: 23px var(--container-padding);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.header .nav .nav_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.header .nav ul{
+    display: flex;
+    gap: 40px;
+}
+
+.header .nav ul li a{
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 800px){
+    .header .nav .ul_container {
+        height: auto !important;
+    }
+}
+.header .btn_bar{
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+
+.header_fixed{
+    position: fixed;
+}
+
+/* ---- Style Of Banner ---- */
+
+.banner_background{
+    background-image: url('images/bannerBackground/color.png'),
+    url('images/bannerBackground/img1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.price .price_image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.price .price_image h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    color: #006CD1;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+.price .travel{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price .travel h1{
+    font-size: 79px;
+}
+
+.price .travel h4{
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding-inline: var(--container-padding);
+}
+
+.buttons button{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.buttons button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/* ---- our services ----*/
+
+
+.our_services{
+    display: flex;
+    padding-inline: var(--container-padding);   
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.our_services .about_services{
+    width: 450px;
+}
+
+.our_services .about_services h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    color: var(--h2-title-color);
+    text-transform: var(--h2-title-textTransform);
+}
+
+.our_services .about_services h1{
+    font-family: var(--h1-title-fontFamily);
+    font-weight: var(--h1-title-weight-semiBold);
+    font-size: var(--h1-title-size);
+    margin-top: var(--h1-title-marginTop);
+    text-transform: var(--h1-title-textTransform);
+}
+
+.our_services .about_services p{
+    font-size: 14px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    color: #8D8D8D;
+    margin-top: 25px;
+    line-height: 22px;
+}
+
+.our_services .services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 100px;
+    
+}
+
+.our_services .services .service{
+    cursor: pointer;
+    margin: 10px;
+}
+
+.our_services .services .service img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.our_services .services .service h1{
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 15px 0px 5px 0px;
+}
+
+.our_services .services .service p{
+    font-size: 16px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    color: #8D8D8D;
+    padding-bottom: 20px;
+    line-height: 22px;
+}
+
+/* ---- modal ----*/
+.modal.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal.active .service{
+    background-color: white;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.modal.active .service img{
+    width: 300px !important;
+    height: 500px !important;
+    padding-top: 20px;
+}
+/* ---- our_video section ----*/
+
+.our_video{
+    height: 75vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/our_video_image/xavier-coiffic.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.our_video .about_video{
+    text-align: center;
+    margin-top: 80px;
+    color: white;
+}
+
+.our_video .about_video h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    text-transform: var(--h2-title-textTransform);
+}
+
+.our_video .about_video h1{
+    font-family: var(--h1-title-fontFamily);
+    font-weight: var(--h1-title-weight-semiBold);
+    font-size: var(--h1-title-size);
+    margin-top: var(--h1-title-marginTop);
+    text-transform: var(--h1-title-textTransform);
+}
+
+.our_video iframe{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    margin-top: 80px;
+}
+/* ---- reviews section ----*/
+
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(4, 170px);
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 110px 0px 70px 0px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.reviews h1{
+    font-size: 32px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 20px;
+}
+
+.reviews h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    text-transform: var(--h2-title-textTransform);
+    color: #1A1A1B;
+    margin-top: 5px;
+}
+
+/* ---- popular_tour ----*/
+.popular_tour{
+    padding-top: 70px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.popular_tour .about_tour{
+    text-align: center;
+    margin-bottom: var(--about-marginBotton);
+}
+.popular_tour .about_tour h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    color: var(--h2-title-color);
+    text-transform: var(--h2-title-textTransform);
+}
+.popular_tour .about_tour h1{
+    font-family: var(--h1-title-fontFamily);
+    font-weight: var(--h1-title-weight-semiBold);
+    font-size: var(--h1-title-size);
+    margin-top: var(--h1-title-marginTop);
+    text-transform: var(--h1-title-textTransform);
+}
+
+.popular_tour .tours{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.popular_tour .tours .tour{
+    position: relative;
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.popular_tour .tours .tour:hover{
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.4);
+}
+
+.popular_tour .tours .holiday{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #FED701;
+    padding: 5px 8px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.popular_tour .tour img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.popular_tour .tour .img_paris{
+    object-position: bottom;
+}
+
+.popular_tour .tour .tour_info{
+    text-align: center;
+    margin: 10px 0 25px 0;
+}
+
+.popular_tour .tour .tour_info h3{
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.popular_tour .tour .tour_info h1{
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #4B54FA;
+    margin: 8px 0 8px 0;
+}
+
+/* ---- sale section ---- */
+.sale{
+    background-image: linear-gradient(rgba(42,245,152,0.7),rgba(8,174,234,0.7)), url('images/sale/vidar-nordli.png');
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.sale .about_sale{
+    color: white;
+    text-align: center;
+    margin-bottom: var(--about-marginBotton);
+}
+
+.sale .about_sale h1{
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.sale .about_sale h3{
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.sale .sale_contact input{
+    width: 395px;
+    height: 50px;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border-radius: 25px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 25px;
+}
+
+.sale .sale_contact input::placeholder{
+    color: white;
+}
+
+.sale .sale_contact button{
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    width: 155px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    color: #08AEEA;
+    margin-left: 25px;
+    transition: .5s;
+}
+.sale .sale_contact button:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* ---- happy travelers ----*/
+.happy_travelers{
+    padding-inline: var(--container-padding);
+    padding-top: 70px;
+}
+.happy_travelers .about_travelers{
+    text-align: center;
+    margin-bottom: var(--about-marginBotton);
+}
+
+.happy_travelers .about_travelers h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    color: var(--h2-title-color);
+    text-transform: var(--h2-title-textTransform);
+}
+
+.happy_travelers .about_travelers h1{
+    font-family: var(--h1-title-fontFamily);
+    font-weight: var(--h1-title-weight-semiBold);
+    font-size: var(--h1-title-size);
+    margin-top: var(--h1-title-marginTop);
+    text-transform: var(--h1-title-textTransform);
+}
+
+.happy_travelers .travelers{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    text-align: center;
+}
+
+.happy_travelers .travelers .traveler{
+    background-color: #F4F4F4;
+    padding: 70px 50px;
+}
+
+.happy_travelers .travelers .traveler .traveler_img{
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 1px solid #c5c5c5;
+}
+
+.happy_travelers .travelers .traveler h1{
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #4B54FA;
+    margin: 15px 0 30px 0;
+}
+
+.happy_travelers .travelers .traveler p{
+    font-size: 16px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.happy_travelers .travelers .traveler .traveler_forma{
+    margin-top: 40px;
+}
+
+/* ---- book_container section ---- */
+
+.book_container{
+    background-image: url('images/happy_travelers/bgImage.png');
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.book_container h1{
+    font-size: 36px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.book_container button{
+    cursor: pointer;
+    width: 170px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-image: linear-gradient(rgba(42,245,152,0.7),rgba(8,174,234,0.7));
+    font-size: 16px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* ---- popular tourism section ---- */
+
+.popular_tourism{
+    padding-inline: var(--container-padding);
+    padding-top: 70px;
+}
+
+.popular_tourism .about_tourism{
+    text-align: center;
+    margin-bottom: var(--about-marginBotton);
+}
+
+.popular_tourism .about_tourism h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    color: var(--h2-title-color);
+    text-transform: var(--h2-title-textTransform);
+}
+
+.popular_tourism .about_tourism h1{
+    font-family: var(--h1-title-fontFamily);
+    font-weight: var(--h1-title-weight-semiBold);
+    font-size: var(--h1-title-size);
+    margin-top: var(--h1-title-marginTop);
+    text-transform: var(--h1-title-textTransform);
+}
+
+.popular_tourism .countries{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 45px;
+}
+
+.popular_tourism .countries img{
+    width: 100%;
+    height: 425px;
+    object-fit: cover;
+}
+
+.popular_tourism .countries .country{
+    position: relative;
+}
+
+.popular_tourism .countries .country .country_gradient{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.1),rgba(237, 237, 237, 0.6),rgb(0,0,0));
+    z-index: 1;
+}
+
+.popular_tourism .countries .country .country_info{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 10px 20px;
+    color: white;
+    z-index: 2;
+}
+
+.popular_tourism .countries .country .country_info h1{
+    font-size: 30px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.popular_tourism .countries .country .country_info h3{
+    font-size: 14px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.popular_tourism .countries .country .country_info a{
+    cursor: pointer;
+    background-image: linear-gradient(rgb(42,245,152),rgb(8,174,234));
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* ---- map_container ---- */
+.map_container{
+    padding-top: 70px;
+}
+/* ---- footer ---- */
+
+.footer{
+    background-color: #141418;
+    color: white;
+}
+
+.footer .footer_links{
+    padding-inline: var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .footer_links .footer_content{
+    display: flex;
+    gap: 80px;
+}
+
+.footer .footer_links .footer_content h1{
+    font-size: 20px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.footer .footer_links .footer_content h2{
+    font-family:var(--h2-title-fontFamily);
+    font-weight: var(--h2-title-weight-semiBold);
+    font-size: var(--h2-title-size);
+    color: #DCDBDB;
+    padding-top: 20px;
+}
+
+.footer .footer_links .subscribe h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.footer .footer_links .subscribe .input_email{
+    width: 350px;
+    position: relative;
+    display: flex;
+    margin-top: 15px;
+}
+
+.footer .footer_links .subscribe .input_email .icon{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #08AEEA;
+    height: 100%;
+    width: 50px;
+}
+
+.footer .footer_links .subscribe input{
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+}
+.footer .footer_links .subscribe input::placeholder{
+    color: black;
+}
+.footer .footer_text{
+    border-top: 1px solid #707070;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+
+/* responive */
+
+@media screen and (max-width:1024px){
+    /* ---- header ---- */
+    .header{
+        padding-inline: 50px;
+    }
+
+    /* ---- bannerBackground ---- */
+
+    .price .price_image img{
+        width: 250px;
+    }
+
+    .price .price_image h1{
+        font-size: 18px;
+    }
+
+    .price .travel h1{
+        font-size: 65px;
+    }
+
+    .buttons{
+        padding-inline: 50px;
+    }
+
+    /* ---- our service ---- */
+
+    .our_services{
+        display: block;
+        padding-inline: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our_services .about_services{
+        text-align: center;
+        width: auto;
+    }
+
+    .our_services .about_services p{
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-size: 15px;
+    }
+
+    .our_services .services{
+        column-gap: 20px;
+        margin: 0;
+    }
+
+    .our_services .services .service h1{
+        font-size: 16px;        
+    }
+
+    .our_services .services .service p{
+        font-size: 14px;
+    }
+
+    /* our video */
+    .our_video iframe{
+        width: 500px;
+    }
+
+    /* ---- reviews ---- */
+
+    .reviews{
+        grid-template-columns: repeat(4, 125px);
+    }
+    .reviews h1{
+        font-size: 25px;
+    }
+
+    .reviews h2{
+        font-size: 13px;
+    }
+
+
+    /* ---- popular_tour ---- */
+    .popular_tour{
+        padding-inline: 100px;
+    }
+    .popular_tour .tours{
+        column-gap: 20px;
+    }
+    .popular_tour .tour img{
+        height: 250px;
+    }
+
+    /* happy travelers */
+
+    .happy_travelers{
+        padding-inline: 50px;
+    }
+
+    .happy_travelers .travelers{
+        column-gap: 25px;
+    }
+
+    .happy_travelers .travelers .traveler {
+        background-color: #F4F4F4;
+        padding: 30px 15px;
+    }
+
+    .happy_travelers .travelers .traveler p {
+        font-size: 14px;
+    }
+    .happy_travelers .travelers .traveler .traveler_forma{
+        margin-top: 20px;
+    }
+
+    /* ---- popular toursim ---- */
+
+    .popular_tourism{
+        padding-inline: 50px;
+    }
+
+    .popular_tourism .countries{
+        column-gap: 15px;
+    }
+
+    .popular_tourism .countries img{
+        height: 300px;
+    }
+
+    .popular_tourism .countries .country .country_info{
+        padding: 0px 10px 5px 10px;
+    }
+
+    .popular_tourism .countries .country .country_info h1{
+        font-size: 22px;
+    }
+
+    .popular_tourism .countries .country .country_info h3{
+        font-size: 12px;
+    }
+
+    .popular_tourism .countries .country .country_info a{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ---- footer ---- */
+
+    .footer .footer_links{
+        padding-inline: 50px;
+    }
+
+    .footer .footer_links .footer_content{
+        column-gap: 50px;
+    }
+
+    .footer .footer_links .footer_content h1{
+        font-size: 16px;
+    }
+
+    .footer .footer_links .footer_content h2{
+        font-size: 13px;
+    }
+
+    .footer .footer_links .subscribe h2{
+        font-size: 14px;
+    }
+
+    .footer .footer_links .subscribe .input_email{
+        width: 240px;
+    }
+    .footer .footer_links .subscribe .input_email .icon{
+        width: 45px;
+    }
+    .footer .footer_links .subscribe input{
+        font-size: 14px;
+    }
+
+    .footer .footer_text{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    /* ---- modal ----*/
+    .modal.active .service{
+        width: 400px;
+        height: 350px;
+    }
+    .modal.active .service img{
+        width: 250px !important;
+        height: 180px !important;
+    }
+    /* ---- header navbar ---- */
+    .header .nav{
+        display: block;
+    }
+
+    .header .nav .ul_container{
+        height: 0;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .header .nav ul{
+        padding-top: 20px;
+        display: block;
+    }
+
+    .header .nav ul a{
+        display: block;
+        padding: 15px;
+    }
+
+    .header .btn_bar{
+        display: block;
+        transition: .4s;
+    }
+
+    .header .btn_bar.active{
+        transform: rotate(90deg);
+    }
+
+    /* ---- bannerBackground ---- */
+    .banner_background{
+        height: 70vh;
+    }
+    .price .price_image img{
+        width: 180px;
+    }
+
+    .price .price_image h1{
+        font-size: 15px;
+    }
+
+    .price .travel h1{
+        font-size: 45px;
+    }
+
+    .price .travel h4{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    /* ---- our service ---- */
+    .our_services .services{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews{
+        grid-template-columns: repeat(2, 125px);
+        row-gap: 70px;
+    }
+
+    .reviews img{
+        width: 65px;
+    }
+
+    .reviews h1{
+        font-size: 32px;
+    }
+
+    .reviews h2{
+        font-size: 14px;
+    }
+
+    /* ---- popular tour ---- */
+    .popular_tour{
+        padding-inline: 180px;
+    }
+    .popular_tour .tours{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .popular_tour .tours .holiday{
+        top: 30px;
+        left: 30px;
+        padding: 10px 22px;
+        font-size: 13px;
+    }
+
+    .popular_tour .tour img{
+        width: 100%;
+        height: 320px;
+    }
+
+    .popular_tour .tour .tour_info h3{
+        font-size: 17px;
+    }
+
+    .popular_tour .tour .tour_info h1{
+        font-size: 23px;
+    }
+
+    /* ---- happy_travelers ---- */
+
+    .happy_travelers .travelers{
+        column-gap: 15px;
+    }
+
+    .happy_travelers .travelers .traveler{
+        padding: 20px 10px;
+    }
+
+    .happy_travelers .travelers .traveler p{
+        font-size: 12px;
+    }
+
+    /* ---- popular_tourism ---- */
+
+    .popular_tourism .countries{
+        grid-template-columns: repeat(2, 1fr);
+        gap:  60px 30px;
+    }
+
+    .popular_tourism .countries img{
+        height: 395px;
+    }
+
+    .popular_tourism .countries .country .country_info{
+        padding: 0 20px 10px 20px;
+    }
+
+    .popular_tourism .countries .country .country_info h1{
+        font-size: 30px;
+    }
+
+    .popular_tourism .countries .country .country_info h3{
+        font-size: 14px;
+    }
+
+    .popular_tourism .countries .country .country_info a{
+        width: 40px;
+        height: 40px;
+    }
+
+    /* */
+    .footer .footer_links{
+        flex-direction: column;
+    }
+
+    .footer .footer_links .footer_content{
+        justify-content: space-between;
+    }
+
+    .footer .footer_links .footer_content h1{
+        font-size: 20px;
+    }
+
+    .footer .footer_links .footer_content h2{
+        font-size: 15px;
+    }
+
+    .footer .footer_links .subscribe h2{
+        font-size: 16px;
+    }
+
+    .footer .footer_links .subscribe .input_email{
+        width: 350px;
+    }
+
+    .footer .footer_links .subscribe input{
+        font-size: 16px;
+    }
+
+    .footer .footer_links .subscribe .input_email .icon{
+        width: 50px;
+    }
+
+    .footer .footer_links .subscribe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (max-width:635px){
+
+    .price .price_image img{
+        width: 160px;
+    }
+
+    .price .price_image h1{
+        font-size: 12px;
+    }
+
+    .price .travel h1{
+        font-size: 32px;
+    }
+
+    .price .travel h4{
+        font-size: 10px;
+        margin-top: 15px;
+    }
+
+    /* our services */
+    .our_services{
+        padding-inline: 80px;
+    }
+    .our_services .services .service img{
+        width: 100%;
+        height: 130px;
+    }
+    
+    .our_services .services .service h1{
+            font-size: 12px;
+    }
+
+    .our_services .services .service p{
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    /* ---- our video ---- */
+    .our_video iframe{
+        height: 250px;
+        width: 350px;
+    }
+    /* ---- popular tour ---- */
+    .popular_tour{
+        padding-inline: 120px;
+    }
+
+    /* sale */
+    .sale .about_sale h1{
+        font-size: 28px;
+    }
+
+    .sale .about_sale h3{
+        font-size: 16px;
+    }
+
+    .sale .sale_contact input{
+        width: 250px;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .sale .sale_contact button{
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    /* ---- travelers ---- */
+    .happy_travelers{
+        padding-inline: 80px;
+    }
+
+    .happy_travelers .travelers{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+    }
+
+    .happy_travelers .travelers .traveler{
+        padding: 40px 40px;
+    }
+
+    .happy_travelers .travelers .traveler p{
+        font-size: 14px;
+    }
+
+    .happy_travelers .travelers .traveler .traveler_forma{
+        margin-top: 25px;
+    }
+
+    /* ---- popular tourism */
+    .popular_tourism{
+        padding-inline: 80px;
+    }
+
+    .popular_tourism .countries{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ---- footer ---- */
+    .footer .footer_links .footer_content h1{
+        font-size: 16px;
+    }
+
+    .footer .footer_links .footer_content h2{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:475px){
+    /* ----modal ---- */
+    .modal.active .service{
+        width: 250px;
+        height: 250px;
+        border-radius: 15px;
+    }
+    .modal.active .service img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    /* header */
+    .header{
+        padding: 13px 30px;
+    }
+
+    .header .nav .nav_header img{
+        width: 100px;
+    }
+
+    .header .btn_bar{
+        font-size: 22px;
+    }
+
+    .header .nav ul{
+        padding-top: 15px;
+
+        text-align: center;
+    }
+
+    .header .nav ul li a{
+        font-size: 13px;
+    }
+
+    .header .nav ul a{
+        padding: 6px;
+    }
+
+    /* banner background */
+    .banner_background{
+        height: 50vh;
+    }
+    .price .price_image img{
+        width: 140px;
+    }
+
+    .price .price_image h1{
+        font-size: 10px;
+    }
+
+    .price .travel h1{
+        font-size: 28px;
+    }
+
+    .price .travel h4{
+        font-size: 9px;
+        margin-top: 10px;
+    }
+
+    .buttons{
+        padding-inline: 30px;
+    }
+
+    .buttons button{
+        width: 22px;
+        height: 22px;
+    }
+
+    .buttons button i{
+        font-size: 8px;
+    }
+
+    /* ---- our service ---- */
+    .our_services{
+        padding: 40px 40px 40px 40px;
+    }
+    .our_services .about_services{
+        padding-inline: 40px;
+    }
+
+    .our_services .about_services h2{
+        font-size: 13px;
+    }
+
+    .our_services .about_services h1{
+        font-size: 20px;
+    }
+
+    .our_services .about_services p{
+        margin-top: 25px;
+        font-size: 12px;
+    }
+
+    .our_services{
+        padding-inline: 30px;
+    }
+
+    /* ---- review ---- */
+    .reviews{
+        padding: 70px 0px 40px 0px;
+    }
+
+    .reviews img{
+        width: 55px;
+    }
+
+    .reviews h1{
+        font-size: 23px;
+    }
+
+    .reviews h2{
+        font-size: 11px;
+    }
+    /* our video */
+    .our_video{
+        height: 55vh;
+    }
+    .our_video .about_video{
+        margin-top: 40px;
+    }
+    
+    .our_video .about_video h2{
+        font-size: 13px;
+    }
+
+    .our_video .about_video h1{
+        font-size: 20px;
+    }
+
+    .our_video iframe{
+        height: 150px;
+        width: 250px;
+    }
+    /* ---- popular tour */
+    .popular_tour{
+        padding-top: 40px;
+        padding-inline: 30px;
+    }
+
+    .popular_tour .about_tour h2{
+        font-size: 13px;
+    }
+    .popular_tour .about_tour h1{
+        font-size: 20px;
+    }
+
+    /* ---- sale ---- */
+    .sale{
+        height: 35vh;
+    }
+    .sale .sale_contact input{
+        width: 200px;
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .sale .sale_contact button{
+        width: 80px;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    /* happy travelers */
+    .happy_travelers{
+        padding: 40px 30px 0px 30px;
+    }
+
+    .happy_travelers .about_travelers{
+        margin-bottom: 30px;
+    }
+
+    .happy_travelers .about_travelers h2{
+        font-size: 13px;
+    }
+
+    .happy_travelers .about_travelers h1{
+        font-size: 20px;
+    }
+
+    .happy_travelers .travelers .traveler{
+        padding: 30px 20px;
+    }
+
+    /* ---- book container */
+    .book_container{
+        height: 45vh;
+    }
+
+    .book_container h1{
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .book_container button{
+        width: 120px;
+        height: 35px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    /* ---- popular tourism */
+    .popular_tourism{
+        padding: 40px 30px 0 30px;
+    }
+
+    .popular_tourism .about_tourism{
+        margin-bottom: 30px;
+    }
+
+    .popular_tourism .about_tourism h2{
+        font-size: 13px;
+    }
+
+    .popular_tourism .about_tourismh1{
+        font-size: 20px;
+    }
+
+    /* ---- footer ---- */
+    .footer .footer_links{
+        padding: 20px;
+    }
+
+    .footer .footer_links .footer_content{
+        column-gap: 20px;
+    }
+
+    .footer .footer_links .footer_content h1{
+        font-size: 14px;
+    }
+
+    .footer .footer_links .footer_content h2{
+        font-size: 10px;
+        padding-top: 10px;
+    }
+
+    .footer .footer_links .subscribe h2{
+        font-size: 13px;
+    }
+
+    .footer .footer_links .subscribe .input_email{
+        width: 200px;
+        height: 30px;
+    }
+
+    .footer .footer_links .subscribe input{
+        height: 30px;
+    }
+
+    .footer .footer_links .subscribe .input_email .icon{
+        width: 30px;
+    }
+
+    .footer .footer_text{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
